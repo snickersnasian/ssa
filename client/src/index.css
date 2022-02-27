@@ -61,13 +61,22 @@ button {
 /* Navbar */
 
 .nav {
-    margin-bottom: 213px;
+    position: fixed;
+    width: 85.3%;
+    top: 57px;
+    transition: all .2s;
+}
+
+.nav__invisible {
+    opacity: 0;
+    transition: all .2s;
 }
 
 .nav nav {
     display: flex;
     align-items: top;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav__logo-wrapper {
@@ -166,5 +175,85 @@ button {
 .nav__my-account-btn:hover {
     background: #000000;
     color: #ffffff;
+    transition: all .3s;
+}
+
+/* Big title */
+
+.big-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 119px;
+    text-transform: none;
+    margin-top: 213px;
+    margin: 213px 0 162px 0;
+    max-width: 1281px;
+}
+
+/* Reception */
+
+.reception {
+    height: 409px;
+    box-shadow: 0px 4px 100px rgba(29, 29, 29, 0.2);
+    border-radius: 115px;
+    margin-bottom: 288px;
+}
+
+.reception__photo {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(270deg, #FFA41C 0%, #BF0202 92.28%);
+    border-radius: 115px;
+    width: 1133px;
+    height: 100%;
+    left: -226px;
+}
+
+.reception__photo-visible {
+    background: url('./media/imgs/reception.png') no-repeat 0 0/100% auto;
+}
+
+.reception__menu {
+    position: relative;
+    z-index: 2;
+    width: 1636px;
+    height: 409px;
+    border-radius: 115px;
+    top: -409px;
+    left: -260px;
+    display: flex;
+    padding: 49px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.reception__menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reception__btn button{
+    background: #000000;
+    border-radius: 33px;
+    width: 306px;
+    height: 66px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+
+.reception__btn {
+    transition: all .3s;
+}
+
+.reception__btn:hover {
+    transform: scale(1.02);
     transition: all .3s;
 }

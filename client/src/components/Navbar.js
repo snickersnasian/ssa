@@ -1,14 +1,33 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ssaLogo from '../media/logos/ssa-logo.svg'
 import ranepaLogo from '../media/logos/ranepa-logo.svg'
 
 export const Navbar = () => {
 
     const [isDropdown, setDropdown] = useState(false)
+    const [navIsVisible, setNavIsVisible] = useState(true)
 
+    const handleScroll = () => {
+
+
+        if (window.scrollY > 200) {
+            return setNavIsVisible(false)
+        }
+
+        return setNavIsVisible(true)
+    }
+
+    useEffect( () => {
+        window.addEventListener('scroll', handleScroll)
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+
+    }, [])
 
     return (
-        <div className="nav" >
+        <div className={"nav " + (navIsVisible ? "" : "nav__invisible")} onScroll={handleScroll}>
             <nav>
                 <div className="nav__logo-wrapper">
 
