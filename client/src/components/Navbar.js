@@ -10,7 +10,7 @@ export const Navbar = () => {
     const handleScroll = () => {
 
 
-        if (window.scrollY > 200) {
+        if (window.scrollY > 150) {
             return setNavIsVisible(false)
         }
 

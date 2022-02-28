@@ -21,10 +21,12 @@ export const Reception = () => {
                         <button>Приемная ССА</button>
                     </div>
 
+
                     <div className="receprion__label">
                         Всегда на связи!
                     </div>
                 </div>
+
             </div>
         </div>
     )

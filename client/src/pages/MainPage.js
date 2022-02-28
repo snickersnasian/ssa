@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from '../components/Navbar'
 import { BigTitle } from '../components/BigTitle'
 import { Reception } from '../components/Reception'
+import { News } from '../components/News'
 
 export const MainPage = () => {
     return (
@@ -9,6 +10,7 @@ export const MainPage = () => {
             <Navbar />
             <BigTitle />
             <Reception />
+            <News />
         </div>
     )
 }
