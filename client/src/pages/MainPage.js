@@ -8,6 +8,8 @@ import teamValues from '../media/imgs/teamValues.svg'
 import { BannerLoop } from '../components/BannerLoop'
 import { Footer } from '../components/Footer'
 
+import { Activities } from '../components/Activities'
+import { Partners } from '../components/Partners'
 
 
 export const MainPage = () => {
@@ -16,13 +18,17 @@ export const MainPage = () => {
             <Navbar />
             <BigTitle />
             <Reception />
+
             <div className="news-events-align">
                 <News />
                 <Events />
             </div>
-            <BannerLoop 
-                image = {teamValues}
-            />
+            
+
+            <BannerLoop image = {teamValues} />
+            <Activities />
+            <Partners />
+            
             <Footer />
         </div>
     )

@@ -5,7 +5,7 @@ import ranepaLogo from '../media/logos/ranepa-logo.svg'
 export const Navbar = () => {
 
     const [isDropdown, setDropdown] = useState(false)
-    const [navIsVisible, setNavIsVisible] = useState(true)
+    const [navIsVisible, setNavIsVisible] = useState(false)
 
     const handleScroll = () => {
 
@@ -18,6 +18,11 @@ export const Navbar = () => {
     }
 
     useEffect( () => {
+
+        if (window.scrollY < 150) {
+            setNavIsVisible(true)
+        }
+
         window.addEventListener('scroll', handleScroll)
         
         return () => {
