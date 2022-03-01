@@ -6,7 +6,7 @@ import { News } from '../components/News'
 import { Events } from '../components/Events'
 import teamValues from '../media/imgs/teamValues.svg'
 import { BannerLoop } from '../components/BannerLoop'
-
+import { Activities } from '../components/Activities'
 
 
 export const MainPage = () => {
@@ -15,13 +15,14 @@ export const MainPage = () => {
             <Navbar />
             <BigTitle />
             <Reception />
+
             <div className="news-events-align">
                 <News />
                 <Events />
             </div>
-            <BannerLoop 
-                image = {teamValues}
-            />
+
+            <BannerLoop image = {teamValues} />
+            <Activities />
         </div>
     )
 }
