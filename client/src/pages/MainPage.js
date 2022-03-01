@@ -6,6 +6,7 @@ import { News } from '../components/News'
 import { Events } from '../components/Events'
 import teamValues from '../media/imgs/teamValues.svg'
 import { BannerLoop } from '../components/BannerLoop'
+import { Footer } from '../components/Footer'
 
 
 
@@ -22,6 +23,7 @@ export const MainPage = () => {
             <BannerLoop 
                 image = {teamValues}
             />
+            <Footer />
         </div>
     )
 }
