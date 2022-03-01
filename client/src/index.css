@@ -503,4 +503,49 @@ button {
     50% {transform: rotate(4deg) translate(0px,0);}
     75% {transform: rotate(-6deg) translate(0px,0);}
     100% {transform: rotate(5deg) translate(0px,0);}
-  }
+}
+
+/* Partners */
+
+.partners {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    left: -250px;
+}
+
+.partners__heading {
+    width: 800px;
+    height: 153px;
+    background: linear-gradient(270deg, #FFA41C 0%, #BF0202 92.28%);
+    border-radius: 115px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 75px;
+    padding: 50px 114px;
+}
+
+.partners__heading p {
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 42px;
+    max-width: 436px;
+}
+
+.partners__logo img {
+    height: 100px;
+    width: auto;
+    margin-right: 38px;
+}
+
+.partners__logos {
+    display: flex;
+    align-items: center;
+}
+
+.easter-egg a {
+    color: red;
+    cursor: initial;
+}

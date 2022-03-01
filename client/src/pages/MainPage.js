@@ -7,6 +7,7 @@ import { Events } from '../components/Events'
 import teamValues from '../media/imgs/teamValues.svg'
 import { BannerLoop } from '../components/BannerLoop'
 import { Activities } from '../components/Activities'
+import { Partners } from '../components/Partners'
 
 
 export const MainPage = () => {
@@ -23,6 +24,7 @@ export const MainPage = () => {
 
             <BannerLoop image = {teamValues} />
             <Activities />
+            <Partners />
         </div>
     )
 }

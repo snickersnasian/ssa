@@ -6,7 +6,6 @@ export const Activities = () => {
     function randomInteger(min, max) {
         // случайное число от min до (max+1)
         let rand = min + Math.random() * (max + 1 - min);
-        console.log(Math.floor(rand));
         return Math.floor(rand);
     }
     
@@ -15,7 +14,7 @@ export const Activities = () => {
         return (
             {
                 position: "relative",
-                left: randomInteger(-70,70),
+                left: randomInteger(-90,90),
                 top: randomInteger(-50,50),
                 animationDelay: randomInteger(-1,-5) + "s",
             }
