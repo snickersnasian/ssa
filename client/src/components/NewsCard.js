@@ -5,7 +5,6 @@ export const NewsCard = (props) => {
 
     const dataArr = props.data
 
-
     const renderSmallCards = (dataArr) => {
 
         let smallCardsArr = []
@@ -13,7 +12,11 @@ export const NewsCard = (props) => {
         for (let i = 1; i < 5; i ++) {
 
             smallCardsArr.push(
-                <div className="news-card__small">
+                <div className="news-card__small"
+                    style={{
+                        background: dataArr[i].image ? 'url(' + dataArr[i].image + ') no-repeat 40% 0/auto 100%' : "black"
+                    }}
+                >
                     <div className="news-small__content">
                 
                         <div className="news-small__title">
@@ -34,7 +37,11 @@ export const NewsCard = (props) => {
 
     return (
         <div className="news-card">
-            <div className="news-card__big">
+            <div className="news-card__big"
+                style={{
+                    background: dataArr[0].image ? 'url(' + dataArr[0].image + ') no-repeat 40% 0/100% фгещ' : "black"
+                }}
+            >
 
                 
 
