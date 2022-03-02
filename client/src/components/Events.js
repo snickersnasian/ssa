@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { EventsCard } from "./EventsCard"
-import events from "../testDB/events.json"
+import { useHttp } from "../hooks/http.hooks"
 
 export const Events = () => {
     
+    const { loading, request, error, clearError } = useHttp()
+
+    const [events, setEvents] = useState([])
+
+    useEffect( async () => {
+        const res = await request('/api/content/events')
+        setEvents(res)
+    }, [])
+
     const eventsRender = (props) => {
         return props.map((element,index) => {
             return (<EventsCard 
@@ -25,7 +34,7 @@ export const Events = () => {
             {eventsRender(events)}  
 
             <div className="events__more">
-                <a href="/events">Больше новостей</a>
+                <a href="/events">Больше мероприятий</a>
             </div>
         </div>
     )
