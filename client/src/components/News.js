@@ -9,14 +9,18 @@ export const News = () => {
         <div className="news">
             <div className="news__wrapper">
                 <div className="news__header">
-                    НОВОСТИ
+                    <a href="">НОВОСТИ</a>
                 </div>
 
                 <div className="news__all">
-                    Все новости
+                    <a href="">Все новости</a>
                 </div>
             </div>
             <NewsCard data={news} />
+
+            <div className="news__more">
+                
+            </div>
         </div>
     )
 }

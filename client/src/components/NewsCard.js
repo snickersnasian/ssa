@@ -17,11 +17,11 @@ export const NewsCard = (props) => {
                     <div className="news-small__content">
                 
                         <div className="news-small__title">
-                            {dataArr[i].title}
+                            <a style={{color: 'white'}} href="">{dataArr[i].title}</a>
                         </div>
 
                         <div className="news-small__description">
-                            {dataArr[i].description}
+                            <a style={{color: 'white'}} href="">{dataArr[i].description}</a>
                         </div>
 
                     </div>
@@ -36,14 +36,16 @@ export const NewsCard = (props) => {
         <div className="news-card">
             <div className="news-card__big">
 
+                
+
                 <div className="news-big__content">
 
                     <div className="news-big__title">
-                        {dataArr[0].title}
+                        <a style={{color: 'white'}} href="">{dataArr[0].title}</a>
                     </div>
 
                     <div className="news-big__description">
-                        {dataArr[0].description}
+                    <a style={{color: 'white'}} href="">{dataArr[0].description}</a>
                     </div>
 
                 </div>

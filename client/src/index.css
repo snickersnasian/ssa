@@ -292,7 +292,7 @@ button {
     padding: 55px;
     width: 100%;
     border-radius: 75px;
-    background-color: black;
+    background-color: rgb(85, 85, 85);
     color: white;
     height: 352px;
     margin-bottom: 64px;
@@ -306,7 +306,7 @@ button {
     width: 413px;
     border-radius: 75px;
     color: white;
-    background-color: black;
+    background-color: rgb(85, 85, 85);
     display: flex;
     align-items: flex-end;
 }
