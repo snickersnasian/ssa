@@ -14,12 +14,13 @@ export const Events = () => {
     }, [])
 
     const eventsRender = (props) => {
-        return props.map((element,index) => {
+        return props.map((element, index) => {
             return (<EventsCard 
                 title = {element.title}
                 date = {element.date}
                 time = {element.time}
                 place = {element.place}
+                id = {element._id}
                 key = {index}
             />)
         });
