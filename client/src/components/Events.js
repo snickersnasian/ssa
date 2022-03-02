@@ -21,7 +21,12 @@ export const Events = () => {
             <div className="events-header">
                 <p>Мепроприятия</p>
             </div>
+
             {eventsRender(events)}  
+
+            <div className="events__more">
+                <a href="/events">Больше новостей</a>
+            </div>
         </div>
     )
 }

@@ -19,7 +19,7 @@ export const News = () => {
             <NewsCard data={news} />
 
             <div className="news__more">
-                
+                <a href="/news">Больше новостей</a>
             </div>
         </div>
     )

@@ -17,9 +17,9 @@ export const Footer = () => {
                     <div className="footer-row">
                         <div className="footer-logo"><img src={ssaWhite}/></div>
                         <div className="footer-map">
-                            <a href="/"><p>Презентация</p></a>
-                            <a href="/"><p>Положение</p></a>
-                            <a href="/"><p>КейсВикипедия</p></a>
+                            <a href="https://cloclo55.cldmail.ru/public/get/7XYSAdjLMV1sjTiNQvNHXx8PrTjqHvzEngq69nnYbtqTu1maXmhMHwdgcZarmG2f4wcQtZ/duy-anh@mail.ru/ssa_konkurs_final_3.pptx"><p>Презентация</p></a>
+                            <a href="https://www.ranepa.ru/ob-akademii/studencheskij-sovet/polozhenie-o-studencheskom-sovete/" target="_blank"><p>Положение</p></a>
+                            <a href="https://cloclo53.cldmail.ru/public/get/7YBiEHgjETpwDZEJ1YVEs6eiL9g4weUHJwnmgDzribvUiRrLWmdkmbgQubfTU2iZUP9yze/duy-anh@mail.ru/wikiCase.pdf"><p>КейсВикипедия</p></a>
                         </div>
                     </div>
                     <div className="footer-row">

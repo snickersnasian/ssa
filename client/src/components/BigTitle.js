@@ -2,12 +2,12 @@ import React from 'react'
 
 
 
-export const BigTitle = () => {
+export const BigTitle = (props) => {
 
     return (
         <div className="big-title">
             <h1>
-                Инициатива наказуема, но за нами будущее!
+                {props.title}
             </h1>
         </div>
     )

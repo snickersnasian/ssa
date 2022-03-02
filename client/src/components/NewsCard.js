@@ -14,7 +14,7 @@ export const NewsCard = (props) => {
             smallCardsArr.push(
                 <div className="news-card__small"
                     style={{
-                        background: dataArr[i].image ? 'url(' + dataArr[i].image + ') no-repeat 40% 0/auto 100%' : "black"
+                        background: dataArr[i].image ? 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(' + dataArr[i].image + ') no-repeat 40% 0/auto 100%' : "black"
                     }}
                 >
                     <div className="news-small__content">
@@ -39,7 +39,8 @@ export const NewsCard = (props) => {
         <div className="news-card">
             <div className="news-card__big"
                 style={{
-                    background: dataArr[0].image ? 'url(' + dataArr[0].image + ') no-repeat 40% 0/100% фгещ' : "black"
+                    background: dataArr[0].image ? 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(' + dataArr[0].image + ') no-repeat 40% 0/100% auto' : "black",
+                    
                 }}
             >
 

@@ -47,7 +47,7 @@ export const Navbar = () => {
                 <div className="nav__menu-item-wrapper">
 
                     <div className="nav__menu-item">
-                        <a href="" className="nav__menu-link">о нас</a>
+                        <a href="/" className="nav__menu-link">о нас</a>
                     </div>
 
                     <div className="nav__menu-item" > 
@@ -64,11 +64,11 @@ export const Navbar = () => {
                     </div>
 
                     <div className="nav__menu-item">
-                        <a href="" className="nav__menu-link">партнерам</a>
+                        <a href="/partners" className="nav__menu-link">партнерам</a>
                     </div>
 
                     <div className="nav__menu-item">
-                        <a href="" className="nav__menu-link">карьера</a>
+                        <a href="career" className="nav__menu-link">карьера</a>
                     </div>
 
                 </div>

@@ -16,7 +16,7 @@ export const MainPage = () => {
     return (
         <div className="main-page">
             <Navbar />
-            <BigTitle />
+            <BigTitle title="Инициатива наказуема, но за нами будущее!"/>
             <Reception />
 
             <div className="news-events-align">
