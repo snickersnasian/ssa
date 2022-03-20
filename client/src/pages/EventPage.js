@@ -58,23 +58,27 @@ export const EventPage = () => {
     }
 
     return (
-        <div className="main-page">
+        <div className="event-page">
             <Navbar />
             <BigTitle title={event.title}/>
             <BigTitle title={event.date}/>
             <BigTitle title={event.time}/>
             <BigTitle title={event.place}/>
 
-            <form 
-                onSubmit={handleSubmit}
-                onChange={handleChange}
-            >
-                <input type="text" placeholder="Имя" name="firstName"/>
-                <input type="text" placeholder="Фамилия" name="lastName"/>
-                <input type="mail" placeholder="Почта" name="mail"/>
-                <input type = "hidden" name = "q6_input6"  />
-                <button type="submit"> Получить билет! </button>
-            </form>
+            <div className="form-wrapper">
+                <form
+                    onSubmit = {handleSubmit}
+                    onChange = {handleChange}
+                >
+                    <div className="form-title"><p>Регистрация на мероприятие</p></div>
+                    <input type="text" placeholder="Имя" name="firstName"/>
+                    <input type="text" placeholder="Фамилия" name="lastName"/>
+                    <input type="mail" placeholder="Почта" name="mail"/>
+                    <input type = "hidden" name = "q6_input6"  />
+                    <button type="submit"> Получить билет! </button>
+                
+                </form>
+            </div>
 
             <Footer />
         </div>
