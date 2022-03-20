@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const app = express()
 const bodyParser = require('body-parser')
+const path = require('path')
 const PORT = 5000 || process.env.PORT
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -12,6 +13,12 @@ const start = async () => {
     try {
         await mongoose.connect(process.env.MONGO_DB)
         console.log('Successful DB connection')
+
+        app.use(express.static(path.join(__dirname, 'client' , 'build')))
+
+        app.get( "*", (req, res) => {
+            res.sendFile(path.join(__dirname, 'client' , 'build', 'index.html'))
+        })
 
         app.listen(PORT, () => {console.log(`App started on port ${PORT}`)})
     } catch (err) {
