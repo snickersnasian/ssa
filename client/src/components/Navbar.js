@@ -63,7 +63,7 @@ export const Navbar = () => {
                         </div>
 
                         <div className="nav__menu-item" > 
-                            <a href="" className="nav__menu-link" onMouseOver={() => {setDropdown(true)}}> что мы делаем</a>
+                            <a href="/activities" className="nav__menu-link" onMouseOver={() => {setDropdown(true)}}> что мы делаем</a>
 
                             <div onMouseLeave={() => {setDropdown(false)}} className={"nav__menu-dropdown " + (isDropdown ? "dropdown-active" : null)} >
 
@@ -102,27 +102,23 @@ export const Navbar = () => {
                     <div className="nav_adaptive__items-wrapper">
                         <ul>
                             <li className="nav_adaptive__item">
-                                <a href="">
+                                <a href="/">
                                     главная
                                 </a>
                             </li>
                             <li className="nav_adaptive__item">
-                                <a href="">
+                                <a href="/activities">
                                     что мы делаем
                                 </a>
                             </li>
                             <li className="nav_adaptive__item">
-                                <a href="">
+                                <a href="/partners">
                                     партнерам
                                 </a>
                             </li>
+                            
                             <li className="nav_adaptive__item">
-                                <a href="">
-
-                                </a>
-                            </li>
-                            <li className="nav_adaptive__item">
-                                <a href="">
+                                <a href="/career">
                                     карьера
                                 </a>
                             </li>
