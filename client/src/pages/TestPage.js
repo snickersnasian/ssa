@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar"
 
 
 
-export const DevPage = () => {
+export const TestPage = () => {
     return (
         <div className="">
             <Navbar />
