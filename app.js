@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const app = express()
 const bodyParser = require('body-parser')
-const PORT = 8080 || process.env.PORT
+const PORT =  process.env.PORT || 8080
+const path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/api/content', require('./routes/content.routes'))
