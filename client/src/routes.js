@@ -3,7 +3,7 @@ import { Routes , Route, Navigate} from 'react-router-dom'
 import { MainPage } from './pages/MainPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { EventPage } from './pages/EventPage'
-import { DevPage } from './pages/DevPage'
+import { TestPage } from './pages/TestPage'
 
 
 export const useRoutes = () => {
@@ -11,7 +11,7 @@ export const useRoutes = () => {
         <Routes>
             <Route path='/' element={<MainPage />}/>
             <Route path='/events/:id' element={<EventPage />}/>
-            <Route path='/dev' element={<DevPage />}/>
+            <Route path='/dev' element={<TestPage />}/>
             <Route path='*' element={<NotFoundPage />}/>
         </Routes>
     )
