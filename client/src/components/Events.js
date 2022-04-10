@@ -14,6 +14,15 @@ export const Events = () => {
     }, [])
 
     const eventsRender = (props) => {
+
+        if (!props) {
+            return(
+                <div className="">
+                    нет событий
+                </div>
+            )
+        }
+        
         return props.map((element, index) => {
             return (<EventsCard 
                 title = {element.title}
