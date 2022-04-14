@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useState }from "react"
 import laptop from '../media/imgs/3d-laptop.png'
 
 
 export const ForEveryStudent = () => {
 
+    const [position, setPosition] = useState(1)
+
+    const handleClick = (evt) => {
+        const pos = evt.target.getAttribute('pos')
+        console.log(pos)
+        setPosition(pos)
+    }
 
     return(
         <div className="for-student">
@@ -20,7 +27,7 @@ export const ForEveryStudent = () => {
 
                 
 
-                <div className="for-student__card">
+                <div pos="1" onClick={handleClick} className={"for-student__card " + (position === "1" ? '' : 'card-inactive')}>
                     <div className="for-student__image">
                         <img src={laptop} alt="" />
                     </div>
@@ -52,7 +59,7 @@ export const ForEveryStudent = () => {
                     </div>
 
                     <div className="for-student__card-inactive">
-                        <div style={{
+                        <div pos="1" style={{
                             color: '#FB9C1B'
                         }} className="for-student__card-inactive-title">
                             ИНИЦИАТИВА
@@ -60,7 +67,7 @@ export const ForEveryStudent = () => {
                     </div>
                 </div>
 
-                <div className="for-student__card card-inactive ">
+                <div pos="2" onClick={handleClick} className={"for-student__card " + (position === "2" ? '' : 'card-inactive')}>
                     <div className="for-student__image">
                         <img src={laptop} alt="" />
                     </div>
@@ -95,7 +102,7 @@ export const ForEveryStudent = () => {
 
 
                     <div className="for-student__card-inactive">
-                        <div style={{
+                        <div pos="2" style={{
                             color: '#FF6A6A'
                         }} className="for-student__card-inactive-title">
                             МЕНТАЛЬНОЕ ЗДОРОВЬЕ
@@ -103,7 +110,7 @@ export const ForEveryStudent = () => {
                     </div>
                 </div>
 
-                <div className="for-student__card card-inactive">
+                <div pos="3" onClick={handleClick} className={"for-student__card " + (position === "3" ? '' : 'card-inactive')}>
                     <div className="for-student__image">
                         <img src={laptop} alt="" />
                     </div>
@@ -138,7 +145,7 @@ export const ForEveryStudent = () => {
 
 
                     <div className="for-student__card-inactive">
-                        <div style={{
+                        <div pos="3" style={{
                             color: '#FFA41C'
                         }} className="for-student__card-inactive-title">
                             Я ИЗ ОБЩЕЖИТИЯ/ГЖК
@@ -146,7 +153,7 @@ export const ForEveryStudent = () => {
                     </div>
                 </div>
 
-                <div className="for-student__card card-inactive">
+                <div pos="4" onClick={handleClick} className={"for-student__card " + (position === "4" ? '' : 'card-inactive')}>
                     <div className="for-student__image">
                         <img src={laptop} alt="" />
                     </div>
@@ -181,7 +188,7 @@ export const ForEveryStudent = () => {
 
 
                     <div className="for-student__card-inactive">
-                        <div style={{
+                        <div pos="4" style={{
                             color: '#6D6D6D'
                         }} className="for-student__card-inactive-title">
                             КОНТРОЛЬ КАЧЕСТВА ОБРАЗОВАНИЯ
@@ -189,7 +196,7 @@ export const ForEveryStudent = () => {
                     </div>
                 </div>
 
-                <div className="for-student__card card-inactive">
+                <div pos="5" onClick={handleClick} className={"for-student__card " + (position === "5" ? '' : 'card-inactive')}>
                     <div className="for-student__image">
                         <img src={laptop} alt="" />
                     </div>
@@ -224,7 +231,7 @@ export const ForEveryStudent = () => {
 
 
                     <div className="for-student__card-inactive">
-                        <div style={{
+                        <div pos="5" style={{
                             color: '#000000'
                         }} className="for-student__card-inactive-title">
                             FAQ
