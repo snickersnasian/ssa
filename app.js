@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const app = express()
 const bodyParser = require('body-parser')
+const PORT =  process.env.PORT || 8080
 const path = require('path')
-const PORT = process.env.PORT || 5000
 
 app.use(bodyParser.urlencoded({
     extended: false

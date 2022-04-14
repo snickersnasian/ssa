@@ -39,8 +39,7 @@ export const NewsCard = (props) => {
         <div className="news-card">
             <div className="news-card__big"
                 style={{
-                    background: dataArr[0].image ? 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(' + dataArr[0].image + ') no-repeat 40% 0/100% auto' : "black",
-                    
+                    background: dataArr[0].image ? 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(' + dataArr[0].image + ') no-repeat 40% 0/100% auto' : "black", 
                 }}
             >
 
