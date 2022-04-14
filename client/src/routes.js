@@ -15,6 +15,7 @@ export const useRoutes = () => {
             <Route path='/dev' element={<TestPage />}/>
             <Route path='*' element={<NotFoundPage />}/>
             <Route path='/about' element={<AboutPage />}/>
+            <Route path='/ticket/:id' element={<TicketPage />}/>
         </Routes>
     )
 }

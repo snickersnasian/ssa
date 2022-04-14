@@ -49,8 +49,8 @@ export const Footer = () => {
             </div>
 
             <div className="footer-policy">
-                <a href="https://www.youtube.com/watch?v=Tm0nIvf14Ro" target="_blank"><p>Политика обработки данных</p></a>
-                <a href="https://www.youtube.com/watch?v=7OBx-YwPl8g" target="_blank"><p>Политика конфиденциальности</p></a>
+                <a href="https://www.youtube.com/" target="_blank"><p>Политика обработки данных</p></a>
+                <a href="https://www.youtube.com/" target="_blank"><p>Политика конфиденциальности</p></a>
             </div>
         </div>    
     )

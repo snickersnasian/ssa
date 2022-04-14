@@ -10,7 +10,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.use(bodyParser.json())
+
 app.use('/api/content', require('./routes/content.routes'))
+app.use('/api/tickets', require('./routes/ticket.routes'))
 
 const start = async () => {
     try {
