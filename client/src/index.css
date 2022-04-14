@@ -1183,7 +1183,7 @@ nav {
 /* For student */
 
 .for-student {
-
+    margin-bottom: 450px;
 }
 
 .for-student__head {
@@ -1481,4 +1481,212 @@ nav {
         font-size: 25px;
         line-height: 25px;
     }
+}
+
+/* About */
+
+.about {
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+.about-block {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 1300px;
+    height: 750px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.05);
+    border-radius: 161px;
+}
+
+.about-block-first-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 45px 105px 0px;
+}
+
+.time-has-chosen-us {
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 35px;
+    
+    color: #000000;
+}
+
+.about-block-second-line {
+    width: 651px;
+    height: 227px;
+    
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 300px;
+    line-height: 299px;
+    text-align: center;
+    
+    color: #000000;
+
+    margin: 0 auto;
+    
+}
+
+.about-block-third-line {
+    width: 363px;
+    height: 30px;
+    margin: 0 auto 40px;
+
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;
+}
+
+.definition-text:first-child {
+    margin-bottom: 60px;
+
+    
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    
+    color: #252525;
+}
+
+.definition-text:last-child {
+    padding-left: 120px;
+    width: 1155px;
+    height: 168px;
+    
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    
+    color: #252525;
+    
+}
+
+
+/* Centers */
+
+.centers {
+    margin-bottom: 100px;
+}
+
+.centers-header {
+    width: 652px;
+    height: 119px;
+    text-transform: uppercase;
+    margin: 0 auto 130px;
+    
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 119px;
+    
+    color: #252525;    
+}
+
+.centers-table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 auto 25px;
+}
+
+.centers-table-row div {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.centers-table-row div:hover {
+    transform: scale(1.03);
+    transition: all .3s ease-in-out;
+}
+
+.CVnuK {
+    width: 600px;
+    height: 600px;
+    
+    background: no-repeat right url("./media/imgs/CVnuK.svg"), linear-gradient(145.85deg, #DFDFDF 9.15%, #989898 117.54%);
+    border-radius: 98px;
+}
+
+.CCK {
+    width: 600px;
+    height: 600px;
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+
+    /* background-image: url("./media/imgs/CCK.svg"); */
+    
+    background: no-repeat right url("./media/imgs/CCK.svg"), linear-gradient(325.3deg, #FF6A6A -2.41%, #DF3434 147.1%);
+    border-radius: 98px;
+}
+
+.CVK {
+    width: 600px;
+    height: 600px;
+    
+    background: no-repeat right url("./media/imgs/CVK.svg"), linear-gradient(220.17deg, #FFA41C 2.26%, #F9D871 115.75%);
+    border-radius: 98px;
+}
+
+.CMA {
+    width: 600px;
+    height: 600px;
+    
+    background: no-repeat right url("./media/imgs/CMA.svg"), linear-gradient(215.43deg, #DFDFDF 3.53%, #989898 114.63%);
+    border-radius: 98px;
+}
+
+.convocation {
+    padding: 55px 55px;
+    margin-bottom: 165px;
+    width: 18px;
+    height: 24px;
+    
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #000000;
+}
+
+.center-name {
+    width: 350px;
+    height: 60px;
+
+    padding-left: 55px;
+    
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    
+    color: #000000;
+    
 }

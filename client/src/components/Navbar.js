@@ -63,7 +63,7 @@ export const Navbar = () => {
                         </div>
 
                         <div className="nav__menu-item" > 
-                            <a href="/activities" className="nav__menu-link" onMouseOver={() => {setDropdown(true)}}> что мы делаем</a>
+                            <a href="/about" className="nav__menu-link" onMouseOver={() => {setDropdown(true)}}> что мы делаем</a>
 
                             <div onMouseLeave={() => {setDropdown(false)}} className={"nav__menu-dropdown " + (isDropdown ? "dropdown-active" : null)} >
 
@@ -107,7 +107,7 @@ export const Navbar = () => {
                                 </a>
                             </li>
                             <li className="nav_adaptive__item">
-                                <a href="/activities">
+                                <a href="/about">
                                     что мы делаем
                                 </a>
                             </li>
