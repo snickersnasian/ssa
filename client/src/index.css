@@ -357,7 +357,6 @@ nav {
     font-size: 100px;
     line-height: 119px;
     text-transform: none;
-    margin-top: 213px;
     margin: 213px 0 162px 0;
     max-width: 1281px;
 }
@@ -1207,13 +1206,14 @@ nav {
     box-sizing: border-box;
     border-radius: 40px;
 
+    padding: 60px;
 }
 
 .form-wrapper form input {
     display: flex;
     justify-content: center;
 
-    width: 405px;
+    max-width: 405px;
     height: 43px;
 
     background: white;
@@ -1244,17 +1244,44 @@ nav {
 }
 
 .form-wrapper button {
-    width: 405px;
+    max-width: 405px;
     height: 43px;
 
     font-size: 20px;
+    line-height: 20px;
     text-transform: uppercase;
     color: #000000;
 
+    padding: 20px;
     background: white;
     border-radius: 10px;
 }
 
+/* Form adaptive */
+
+@media screen and (max-width: 500px) {
+    .form-wrapper button {
+     
+
+        font-size: 12px;
+        line-height: 12ox;
+        padding: 10px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .form-wrapper form {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .form-wrapper form input {
+        margin-bottom: 20px;
+    }
+}
 
 /* For student */
 

@@ -64,10 +64,11 @@ export const EventPage = () => {
     return (
         <div className="event-page">
             <Navbar />
-            <BigTitle title={event.title}/>
-            <BigTitle title={event.date}/>
-            <BigTitle title={event.time}/>
-            <BigTitle title={event.place}/>
+            <BigTitle title={event.title + '\n' +
+                            event.date + '\n' +
+                            event.time + '\n' +
+                            event.place
+            }/>
 
             <div className="form-wrapper">
                 <form
