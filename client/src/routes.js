@@ -5,6 +5,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 import { EventPage } from './pages/EventPage'
 import { TestPage } from './pages/TestPage'
 import { AboutPage } from './pages/AboutPage'
+import { TicketPage } from './pages/TicketPage'
 
 
 export const useRoutes = () => {
