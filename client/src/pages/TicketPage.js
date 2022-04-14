@@ -7,7 +7,7 @@ import { useHttp } from '../hooks/http.hooks'
 
 
 
-export const EventPage = () => {
+export const TicketPage = () => {
 
     const [formData, setFormData] = useState({
         firstName: "",
