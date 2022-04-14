@@ -7,9 +7,9 @@ import { Events } from '../components/Events'
 import teamValues from '../media/imgs/teamValues.svg'
 import { BannerLoop } from '../components/BannerLoop'
 import { Footer } from '../components/Footer'
-
 import { Activities } from '../components/Activities'
 import { Partners } from '../components/Partners'
+import { ForEveryStudent } from '../components/ForEveryStudent'
 
 
 export const MainPage = () => {
@@ -29,6 +29,8 @@ export const MainPage = () => {
             <Activities />
             <Partners />
             
+            <ForEveryStudent />
+
             <Footer />
         </div>
     )

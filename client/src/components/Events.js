@@ -8,12 +8,25 @@ export const Events = () => {
 
     const [events, setEvents] = useState([])
 
-    useEffect( async () => {
-        const res = await request('/api/content/events')
-        setEvents(res)
+    useEffect( () => {
+        
+        ( async() => {
+            const res = await request('/api/content/events')
+            setEvents(res)
+        })()
+        
     }, [])
 
     const eventsRender = (props) => {
+
+        if (!props) {
+            return(
+                <div className="">
+                    нет событий
+                </div>
+            )
+        }
+        
         return props.map((element, index) => {
             return (<EventsCard 
                 title = {element.title}

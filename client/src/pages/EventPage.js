@@ -22,9 +22,13 @@ export const EventPage = () => {
 
     const [event, setEvent] = useState([])
 
-    useEffect( async () => {
-        const res = await request('/api/content/events/' + params.id)
-        setEvent(res)
+    useEffect( () => {
+        
+        ( async () => {
+            const res = await request('/api/content/events/' + params.id)
+            setEvent(res)
+        })()
+
     }, [])
 
     const handleSubmit = async (evt) => {
