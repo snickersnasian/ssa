@@ -10,7 +10,7 @@ router.post('/createTicket', async (req, res) => {
         console.log(req.body)
 
         if (Object.keys(req.body).length !== 6) {
-            return res.json({
+            return res.status(400).json({
                 message: 'Error. Body not found or missed fields'
             })
         }
@@ -19,7 +19,7 @@ router.post('/createTicket', async (req, res) => {
             firstName, 
             lastName, 
             mail,
-            event,
+            event, 
             place,
             time
         } = req.body
@@ -30,7 +30,7 @@ router.post('/createTicket', async (req, res) => {
             mail: mail,
             event: event,
             place: place,
-            time: time
+            time: time 
         })
 
         const response = await ticket.save()
@@ -41,8 +41,8 @@ router.post('/createTicket', async (req, res) => {
             ticketId: ticketId
         })
 
-    } catch (err) {
-        res.json({
+    } catch (err) { 
+        res.status(400).json({
             message: err.message
         })
     }
@@ -53,9 +53,9 @@ router.post('/createTicket', async (req, res) => {
 router.get('/getTicket/:id', async (req, res) => {
     try {
 
-        console.log(req.query)
+        console.log(req.params)
 
-        const ticketId = req.query.id
+        const ticketId = req.params.id
 
 
         const ticket = await Ticket.findOne({_id: ticketId})

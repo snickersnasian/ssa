@@ -13,7 +13,9 @@ export const EventPage = () => {
         firstName: "",
         lastName: "",
         mail: "",
-        q6_input6: "",
+        event: "",
+        place: "",
+        time: ""
     })
 
     const params = useParams()
@@ -26,6 +28,7 @@ export const EventPage = () => {
         
         ( async () => {
             const res = await request('/api/content/events/' + params.id)
+
             setEvent(res)
         })()
 
@@ -34,11 +37,12 @@ export const EventPage = () => {
     const handleSubmit = async (evt) => {
         evt.preventDefault()
 
-        const body = new URLSearchParams(formData)
+        const body = JSON.stringify(formData)
+        
 
-        fetch("https://it-mailer.herokuapp.com/api/createTicket",{
+        fetch("/api/tickets/createTicket",{
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json',
             },
             method: "POST",
             body: body
@@ -54,10 +58,10 @@ export const EventPage = () => {
         setFormData({
             ...formData,
             [evt.target.name]: evt.target.value,
-            q6_input6: event.title,
-            date: event.date,
-            time: event.time,
-            place: event.place
+            
+            time: event.date + " " + event.time,
+            place: event.place,
+            event: event.title
         })
     }
 
@@ -76,10 +80,11 @@ export const EventPage = () => {
                     onChange = {handleChange}
                 >
                     <div className="form-title"><p>Регистрация на мероприятие</p></div>
+
                     <input type="text" placeholder="Имя" name="firstName"/>
                     <input type="text" placeholder="Фамилия" name="lastName"/>
                     <input type="mail" placeholder="Почта" name="mail"/>
-                    <input type = "hidden" name = "q6_input6"  />
+
                     <button type="submit"> Получить билет! </button>
                 
                 </form>

@@ -29,7 +29,7 @@ const start = async () => {
     } catch (err) {
         console.log(`Server error ${err.message}`)
         process.exit(1)
-    }
+    } 
 }
 
 start()

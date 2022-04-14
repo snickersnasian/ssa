@@ -9,11 +9,13 @@ import { useHttp } from '../hooks/http.hooks'
 
 export const TicketPage = () => {
 
-    const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        mail: "",
-        q6_input6: "",
+    const [ticketData, setTicketData] = useState({
+        firstName: '',
+        lastName: '',
+        mail: '',
+        event: '',
+        place: '',
+        time: ''
     })
 
     const params = useParams()
@@ -25,36 +27,35 @@ export const TicketPage = () => {
     useEffect( () => {
         
         ( async () => {
-            const res = await request('/api/tickets/getTicket' + params.id)
-            setEvent(res)
+            const res = await request('/api/tickets/getTicket/' + params.id)
+
+            console.log(res)
+
+            setTicketData(res.ticket)
         })()
 
     }, [])
-
-    const handleSubmit = async (evt) => {
-        evt.preventDefault()
-
-        const body = new URLSearchParams(formData)
-
-        fetch("https://it-mailer.herokuapp.com/api/createTicket",{
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            method: "POST",
-            body: body
-        })
-        .then(response => response.json())
-        .then(responseJson => {
-          console.log(responseJson)
-        })
-    }
 
 
     return (
         <div className="ticket-page">
             <Navbar />
-            <BigTitle title="Билет действителен"/>
 
+            <BigTitle style color='green' title="Билет действителен"/>
+
+            <BigTitle title={
+                `
+                    мероприятие: ${ticketData.event} 
+                    время: ${ticketData.time} 
+                `
+            }/>
+
+            <BigTitle title={
+                `
+                    имя: ${ticketData.firstName} 
+                    фамилия: ${ticketData.lastName} 
+                `
+            }/>
             
             <Footer />
         </div>
