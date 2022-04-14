@@ -1304,6 +1304,8 @@ nav {
 
     position: relative;
     z-index: 5;
+
+    margin-bottom: -340px;
 }
 
 .for-student__card:hover {
@@ -1423,16 +1425,29 @@ nav {
 
 .card-inactive {
     background: url(./media/imgs/card-bg-inactive.png) no-repeat 100% 0/auto 100% ,#F6F6F6;
+    height: 505px;
 
     padding: 60px 120px;
    
 }
 
-.card-inactive:nth-child(1) {
-    position: relative;
 
+.card-inactive:nth-child(2) {
+    position: relative;
     z-index: 4;
-   
+}
+
+.card-inactive:nth-child(3) {
+    position: relative;
+    z-index: 3;
+}
+.card-inactive:nth-child(4) {
+    position: relative;
+    z-index: 2;
+}
+.card-inactive:nth-child(5) {
+    position: relative;
+    z-index: 1;
 }
 
 .card-inactive .for-student__image {
