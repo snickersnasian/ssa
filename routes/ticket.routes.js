@@ -38,7 +38,7 @@ router.post('/createTicket', async (req, res) => {
         const response = await ticket.save()
         const ticketId = response.id
 
-        const ticketUrl = `${hostUrl}/api/tickets/getTicket/${ticketId}`
+        const ticketUrl = `${hostUrl}/ticket/${ticketId}`
 
         const qr = await QRCode.toDataURL(ticketUrl)
 
