@@ -62,7 +62,7 @@ router.post('/createTicket', async (req, res) => {
                     <h2>Место: ${place}</h2> 
                     <h2>Дата: ${time}</h2>
 
-                    <p>Имя: ${firstName}</p>
+                    <p>Имя: ${firstName}</p> 
                     <p>Фамилия: ${lastName}</p>
                     <img src=${qr}></img>
                 </div>
@@ -74,12 +74,12 @@ router.post('/createTicket', async (req, res) => {
         if (!result.messageSent) {
             Ticket.findByIdAndDelete(ticketId)
             
-            res.status(400).json({
+            return res.status(400).json({
                 message: "Can't create ticket."
             })
         }
 
-        res.json({
+        res.status(200).json({
             message: 'Ticket created',
             ticketId: ticketId
         })

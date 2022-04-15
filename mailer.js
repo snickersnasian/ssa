@@ -31,7 +31,8 @@ const sendMail = async (receipient, subject, body) => {
         })
 
     } catch (error) {
-        console.log(error)
+        console.log(error.response)
+        console.log()
 
         return({
             messageSent: false, 
