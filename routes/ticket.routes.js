@@ -1,13 +1,15 @@
 const { Router } = require('express')
 const router = Router()
 const Ticket = require('../models/Ticket')
+const QRCode = require('qrcode')
+const { sendMail } = require('../mailer')
 
 
 // /api/tickets/createTicket
 router.post('/createTicket', async (req, res) => {
     try {
 
-        console.log(req.body)
+        const hostUrl = req.protocol + '://' + req.get('host')
 
         if (Object.keys(req.body).length !== 6) {
             return res.status(400).json({
@@ -36,8 +38,49 @@ router.post('/createTicket', async (req, res) => {
         const response = await ticket.save()
         const ticketId = response.id
 
+        const ticketUrl = `${hostUrl}/api/tickets/getTicket/${ticketId}`
+
+        const qr = await QRCode.toDataURL(ticketUrl)
+
+        const mailBody = 
+            `<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Document</title>
+                <style>
+                    h1 {
+                        text-align: center;
+                    }
+                </style>
+            </head>
+            <body>
+                <div className="message">
+                    <h1>Вы зарегистрированы на ${event}</h1> 
+                    <h2>Место: ${place}</h2> 
+                    <h2>Дата: ${time}</h2>
+
+                    <p>Имя: ${firstName}</p>
+                    <p>Фамилия: ${lastName}</p>
+                    <img src=${qr}></img>
+                </div>
+            </body>
+            </html>`
+
+        const result = await sendMail(mail, "Регистрания на мероприятие: " + event, mailBody)
+
+        if (!result.messageSent) {
+            Ticket.findByIdAndDelete(ticketId)
+            
+            res.status(400).json({
+                message: "Can't create ticket."
+            })
+        }
+
         res.json({
-            message: 'ticket created',
+            message: 'Ticket created',
             ticketId: ticketId
         })
 
@@ -53,6 +96,10 @@ router.post('/createTicket', async (req, res) => {
 router.get('/getTicket/:id', async (req, res) => {
     try {
 
+
+        
+
+        
         console.log(req.params)
 
         const ticketId = req.params.id

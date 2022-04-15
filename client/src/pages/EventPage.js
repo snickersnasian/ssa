@@ -40,17 +40,22 @@ export const EventPage = () => {
         const body = JSON.stringify(formData)
         
 
-        fetch("/api/tickets/createTicket",{
+        const res = await fetch("/api/tickets/createTicket",{
             headers: {
                 'Content-Type': 'application/json',
             },
             method: "POST",
             body: body
         })
-        .then(response => response.json())
-        .then(responseJson => {
-          console.log(responseJson)
-        })
+
+        const resJson = await res.json()
+
+        if (!res.ok) {
+            return alert('Что-то пошло не так. Билет не был создан.')
+        }
+
+        alert('Билет был создан и отправлен вам на почту. Если ничего не пришло, проверьте папку "спам"')
+
     }
 
     const handleChange = async (evt) => {
